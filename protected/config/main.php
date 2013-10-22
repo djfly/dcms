@@ -17,11 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'ext.YiiMailer.YiiMailer',
-		'ext.NestedDynaTree.*',
 	),
-	'controllerMap'=>array(
-        'AXtree'=>'ext.NestedDynaTree.AXcontroller'
-    ),
 	'modules'=>array(
 		'install',
 		'admin',
