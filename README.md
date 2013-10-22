@@ -14,6 +14,8 @@ protected/runtime
 
 $yii=dirname(__FILE__).'/../yii14/framework/yii.php'; 
 
+后台帐号admin admin
+
 [DCMS官网 www.cmsboom.com](http://www.cmsboom.com/)”
 
 可能有很多未知错误!请谅解
