@@ -6,5 +6,3 @@ return array(
     'dbPassword' => '',
     'tablePrefix' => 'pre_',
 );
-
-
