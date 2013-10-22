@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'DCMS',
 	'language' => 'zh_cn',
+	'timeZone'=>'Asia/Chongqing',
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap',),
 
