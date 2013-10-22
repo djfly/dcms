@@ -33,7 +33,6 @@ $this->breadcrumbs=array(
         <div class="page-header">
         	<h2>商务合作</h2>
         </div>
-        TEL：18729065312<br>
         QQ：863155629<br>
         Email：business@cmsboom.com
 			  <br><br>

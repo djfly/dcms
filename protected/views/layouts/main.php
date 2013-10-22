@@ -51,27 +51,19 @@
       <div class="text-left">
       <p>友情链接：</p>
       <ul class="inline">
-        <li><a href="http://yincart.com/" target="_blank">yincart</a></li>
-        <li><a href="http://www.bagesoft.cn/" target="_blank">BageCms</a></li>
-        <li><a href="http://www.fircms.com/" target="_blank">fircms</a></li>
-        <li><a href="http://www.kindsoft.net/" target="_blank">kindsoft</a></li>
-        <li><a href="http://www.zentao.net/" target="_blank">禅道</a></li>
-        <li><a href="http://www.akcms.com/" target="_blank">akcms</a></li>
-        <li><a href="http://www.kingcms.com/" target="_blank">kingcms</a></li>
-        <li><a href="http://xheditor.com/" target="_blank">xheditor</a></li>
-        <li><a href="http://www.phpcms.cn/" target="_blank">phpcms</a></li>
-        <li><a href="http://www.pjhome.net/" target="_blank">PJBlog</a></li>
-        <li><a href="http://www.emlog.net/" target="_blank">emlog</a></li>
-        <li><a href="http://www.jieqi.com/" target="_blank">杰奇</a></li>
-        <li><a href="http://www.rainbowsoft.org/" target="_blank">Z-Blog</a></li>
-        <li><a href="http://www.feifeicms.com/" target="_blank">飞飞CMS</a></li>
-        <li><a href="http://www.yiichina.com/" target="_blank">yiichina</a></li>
-        <li><a href="http://www.itchaguan.com/" target="_blank">IT茶馆</a></li>
-        <li><a href="http://www.php100.com/" target="_blank">php100</a></li>
-        <li><a href="http://www.chinahtml.com/" target="_blank">chinahtml</a></li>
-        <li><a href="http://www.phpchina.com/" target="_blank">phpchina</a></li>
-        <li><a href="http://www.cncms.com.cn/" target="_blank">cncms</a></li>
-        <li><a href="http://www.chinahtml.com/" target="_blank">chinahtml</a></li>
+        <?php 
+        $result=Link::model()->findAll(array(
+          'condition'=>'type=:type and visible=:visible',
+          'order' => 'position ASC',
+          // 'limit' => 50,
+          // 'offset' => 0,
+          'params'=>array(':type'=>1,':visible'=>1)
+        ));
+        $items=array();
+        foreach ($result as $key => $value) {
+          echo "<li>".CHtml::link(CHtml::encode($value->name), $value->url,$value->target?array("target"=>"_blank"):'')."</li>";
+        }
+        ?>
       </ul>
       </div>
       <br>
@@ -86,5 +78,10 @@
       </ul> -->
     </div>
   </footer>
+  <div style="display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F98ea678e7c2b73e9be34a18b37115b20' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
 </body>
 </html>
